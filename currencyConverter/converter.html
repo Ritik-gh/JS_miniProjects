@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="converter.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Quando&family=Roboto&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <title>
+            Currency Converter
+        </title>
+    </head>
+    <body>
+        <header>
+            Currency Converter
+        </header>
+        <main>
+            <div>
+                <span>1 USD: </span>
+                <form>
+                    <input list="currency" id="input" autofocus></input>
+                    <datalist id="currency">
+                        <option id="INR" value="INR">Indian Rupee</option>
+                        <option id="EUR" value="EUR">Euro</option>
+                        <option id="JPY" value="JPY">Japanese Yen</option>
+                        <option id="GBP" value="GBP">Great Britain Pound</option>
+                        <option id="HKD" value="HKD">Hong Kong Dollar</option>
+                        <option id="AUD" value="AUD">Australian Dollar</option>
+                        <option id="KRW" value="KRW">South Korean Won</option>
+                        <option id="RUB" value="RUB">Russian Ruble</option>
+                        <option id="ILS" value="ILS">Israeli New Shekel</option>
+                        <option id="CAD" value="CAD">Canadian Dollar</option>
+                        <option id="BRL" value="BRL">Brazilian Real</option>
+                        <option id="MXN" value="MXN">Mexican Peso</option>
+                        <option id="CNY" value="CNY">Chinese Yuan</option>
+                        <option id="USD" value="USD">United States Dollar</option>
+                        <option id="SGD" value="SGD">Singapore Dollar</option>
+                        <option id="ISK" value="ISK">Iceland Krona</option>
+                        <option id="PHP" value="PHP">Peruvian Nuevo Sol</option>
+                        <option id="DKK" value="DKK">Denmark Krone</option>
+                        <option id="HUF" value="HUF">Hungarian Forint</option>
+                        <option id="CZK" value="CZK">Czech Koruna</option>
+                        <option id="RON" value="RON">Romanian New Lei</option>
+                        <option id="SEK" value="SEK">Swedish Krona</option>
+                        <option id="IDR" value="IDR">Indonesian Rupiah</option>
+                        <option id="HRK" value="HRK">Croatian Kuna</option>
+                        <option id="THB" value="THB">Thailand Baht</option>
+                        <option id="CHF" value="CHF">Switzerland Franc</option>
+                        <option id="MYR" value="MYR">Malaysian Ringgit</option>
+                        <option id="BGN" value="BGN">Bulgarian Lev</option>
+                        <option id="TRY" value="TRY">Turkish New Lira</option>
+                        <option id="NOK" value="NOK">Norway Kroner</option>
+                        <option id="NZD" value="NZD">New Zealand Dollar</option>
+                        <option id="ZAR" value="ZAR">South African Rand</option>
+                        <option id="PLN" value="PLN">Polish Zloty New</option>
+                    </datalist>
+                    <input type="submit" value="Change">
+                </form>
+            </div>
+            <div id="output"></div>
+        </main>
+        <script src="converter.js"></script>
+    </body>
+</html>
