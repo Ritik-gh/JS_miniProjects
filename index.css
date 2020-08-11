@@ -5,9 +5,30 @@ body{
 }
 a{
     text-decoration:none;
-    color:#222;
-    font-size:4rem;
+    font-size:3rem;
+    font-weight:bold;
+    font-family: 'Nanum Myeongjo', serif;
+    color:#ef167a;
+
 }
 a:hover{
-    color:#111;
+    color:#01ab5d;
+}
+th, td{
+    padding:10px;
+}
+th{
+    color:#01ab5d;
+    font-size:4rem;
+    font-family: 'Neuton', serif;
+}
+td{
+    font-size:2rem;
+    font-family: 'Baloo 2', cursive;
+    color:#01ab5d;
+}
+.note{
+    font-family: 'Neuton', serif;
+    text-align:center;
+    width:100%;
 }
