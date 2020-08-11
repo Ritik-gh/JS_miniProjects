@@ -1,0 +1,79 @@
+*, *::before, *::after{
+    box-sizing:border-box;
+}
+body{
+    margin:0;
+}
+.calc{
+    width:100vw;
+    height:100vh;
+    display:grid;
+    grid-gap:1%;
+    grid-template-columns:repeat(4, 24%);
+    grid-template-rows:auto;
+    grid-template-areas:
+    "screen screen screen screen"
+    "C C remove divide"
+    "seven eight nine into"
+    "four five six minus"
+    "one two three plus"
+    "zer equals equals equals";
+}
+.one{
+    grid-area:one;
+}
+.two{
+    grid-area:two;
+}
+.three{
+    grid-area:three;
+}
+.four{
+    grid-area:four;
+}
+.five{
+    grid-area:five;
+}
+.six{
+    grid-area:six;
+}
+.seven{
+    grid-area:seven;
+}
+.eight{
+    grid-area:eight;
+}
+.nine{
+    grid-area:nine;
+}
+.zer{
+    grid-area:zer;
+}
+.plus{
+    grid-area:plus;
+}
+.minus{
+    grid-area:minus;
+}
+.into{
+    grid-area:into;
+}
+.divide{
+    grid-area:divide;
+}
+.remove{
+    grid-area:remove;
+}
+.C{
+    grid-area:C;
+}
+.equals{
+    grid-area:equals;
+}
+
+@media(min-width:450px){
+    .calc{
+        grid-template-columns:repeat(4, 80px);
+        margin:0 auto;
+    }
+}

@@ -86,6 +86,15 @@ span[id='time']::before{
     font-family: 'Text Me One', sans-serif;
     font-size:1.25rem;
 }
+span[id="rmvBtn"]{
+    background-color:red;
+    color:antiqueWhite;
+    font-size:2rem;
+    padding:1px 4px;
+    margin:0 auto;
+    align-self:center;
+    cursor:pointer;
+}
 div{
     display:flex;
     flex-direction:column;

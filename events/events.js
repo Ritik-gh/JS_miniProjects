@@ -21,6 +21,9 @@ function EventCard(){
     Description= document.createElement('span');
     Dinank= document.createElement('span');
     Samay= document.createElement('span');
+    removeButton= document.createElement('span');
+
+    removeButton.innerText="remove";
 
     div=document.createElement('div');
 
@@ -28,6 +31,7 @@ function EventCard(){
     Description.setAttribute('id', 'desc');
     Dinank.setAttribute('id', 'date');
     Samay.setAttribute('id', 'time');
+    removeButton.setAttribute('id', 'rmvBtn')
 
     Event.textContent=eventF;
     Description.textContent=descF;
@@ -38,7 +42,13 @@ function EventCard(){
     div.appendChild(Description);
     div.appendChild(Dinank);
     div.appendChild(Samay);
+    div.appendChild(removeButton);
 
     console.log(div);
     document.querySelector('main').appendChild(div);
+
+    document.querySelector("#rmvBtn").addEventListener('click', function remove(){
+
+})
 }
+
