@@ -1,34 +1,60 @@
+*, *::before, *::after{
+    box-sizing:border-box;
+}
+@keyframes anim1{
+    from {
+        left:-500px;
+    }
+    to {
+        left:0;
+    }
+}
 body{
+    margin:0;
     display:flex;
+    flex-flow:column wrap;
+    position: relative;
+    animation-name:anim1;
+    animation-duration:1.5s;
+}
+header{
+    color:#01ab5d;
+    font-weight:bold;
+    font-size:4rem;
+    font-family: 'Neuton', serif;
+    width:100%;
+    text-align:center;
+}
+main{
+    width:100%;
+    display:flex;
+    flex-flow:column wrap;
+}
+project{
+    width:100%;
+    display:flex;
+    flex-flow:row wrap;
     justify-content:center;
     align-items:center;
+    padding:.5rem 2rem;
+}
+name{
+    flex:0 0 50%;
 }
 a{
     text-decoration:none;
-    font-size:3rem;
+    font-family:'baloo 2', cursive;
+    color:orangered;
+    font-size:50px;
     font-weight:bold;
-    font-family: 'Nanum Myeongjo', serif;
-    color:#ef167a;
-
 }
 a:hover{
+    text-decoration:none;
     color:#01ab5d;
 }
-th, td{
-    padding:10px;
-}
-th{
-    color:#01ab5d;
-    font-size:4rem;
+description{
+    flex:0 0 50%;
     font-family: 'Neuton', serif;
-}
-td{
+    color:#01ab5d;
     font-size:2rem;
-    font-family: 'Baloo 2', cursive;
-    color:#01ab5d;
-}
-.note{
-    font-family: 'Neuton', serif;
-    text-align:center;
-    width:100%;
 }
