@@ -3,7 +3,7 @@
 }
 @keyframes anim1{
     from {
-        left:-500px;
+        left:-600px;
     }
     to {
         left:0;
@@ -23,7 +23,11 @@ header{
     font-size:4rem;
     font-family: 'Neuton', serif;
     width:100%;
-    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:10px;
+    border-bottom:1px solid rgba(1, 171, 93, 0.2);
 }
 main{
     width:100%;
@@ -37,6 +41,7 @@ project{
     justify-content:center;
     align-items:center;
     padding:.5rem 2rem;
+    border-bottom:1px solid rgba(1, 171, 93, 0.2);
 }
 name{
     flex:0 0 50%;
@@ -45,7 +50,7 @@ a{
     text-decoration:none;
     font-family:'baloo 2', cursive;
     color:orangered;
-    font-size:50px;
+    font-size:3rem;
     font-weight:bold;
 }
 a:hover{
@@ -56,5 +61,30 @@ description{
     flex:0 0 50%;
     font-family: 'Neuton', serif;
     color:#01ab5d;
-    font-size:2rem;
+    font-size:1.5rem;
+}
+
+/*---------------Responsiveness--------------------*/
+
+@media(max-width:800px){
+    header{
+        margin-bottom:10px;
+        font-size:3rem;
+    }
+    project{
+        flex-flow:column wrap;
+        margin-bottom:10px;
+        align-items:flex-start;
+        border:1px solid rgba(1, 171, 93, 0.2);
+    }
+    name{
+        flex:0 0 auto;
+    }
+    a{
+        font-size:1.6rem;
+    }
+    description{
+        flex:0 0 auto;
+        font-size:1rem;
+    }
 }
