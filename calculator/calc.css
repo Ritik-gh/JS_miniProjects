@@ -1,79 +1,123 @@
-*, *::before, *::after{
-    box-sizing:border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-body{
-    margin:0;
+body {
+  margin: 0;
+  background-color: #333;
+  color: white;
 }
-.calc{
-    width:100vw;
-    height:100vh;
-    display:grid;
-    grid-gap:1%;
-    grid-template-columns:repeat(4, 24%);
-    grid-template-rows:auto;
-    grid-template-areas:
+.calc {
+  max-width: 380px;
+  height: 60vh;
+  display: grid;
+  grid-gap: 2%;
+  grid-template-columns: repeat(4, 23%);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
     "screen screen screen screen"
     "C C remove divide"
     "seven eight nine into"
     "four five six minus"
     "one two three plus"
     "zer equals equals equals";
+  justify-content: center;
+  border: 5px solid black;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #222;
 }
-.one{
-    grid-area:one;
+.screen {
+  grid-area: screen;
+  border: 1px solid black;
+  border-radius: 1rem;
+  background-color: black;
+  padding: 0.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
 }
-.two{
-    grid-area:two;
+.one {
+  grid-area: one;
 }
-.three{
-    grid-area:three;
+.two {
+  grid-area: two;
 }
-.four{
-    grid-area:four;
+.three {
+  grid-area: three;
 }
-.five{
-    grid-area:five;
+.four {
+  grid-area: four;
 }
-.six{
-    grid-area:six;
+.five {
+  grid-area: five;
 }
-.seven{
-    grid-area:seven;
+.six {
+  grid-area: six;
 }
-.eight{
-    grid-area:eight;
+.seven {
+  grid-area: seven;
 }
-.nine{
-    grid-area:nine;
+.eight {
+  grid-area: eight;
 }
-.zer{
-    grid-area:zer;
+.nine {
+  grid-area: nine;
 }
-.plus{
-    grid-area:plus;
+.zer {
+  grid-area: zer;
 }
-.minus{
-    grid-area:minus;
+.plus {
+  grid-area: plus;
 }
-.into{
-    grid-area:into;
+.minus {
+  grid-area: minus;
 }
-.divide{
-    grid-area:divide;
+.into {
+  grid-area: into;
 }
-.remove{
-    grid-area:remove;
+.divide {
+  grid-area: divide;
 }
-.C{
-    grid-area:C;
+.remove {
+  grid-area: remove;
 }
-.equals{
-    grid-area:equals;
+.C {
+  grid-area: C;
+}
+.equals {
+  grid-area: equals;
 }
 
-@media(min-width:450px){
-    .calc{
-        grid-template-columns:repeat(4, 80px);
-        margin:0 auto;
-    }
+button {
+  font-size: 20px;
+  border: 1px solid #333;
+  border-radius: 1rem;
+  outline: 0;
+  transition: transform 0.5s, background-color 0.5s;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+button:active {
+  background-color: #ccc;
+  transform: scale(0.85);
+}
+
+@media (min-width: 450px) {
+  .calc {
+    grid-template-columns: repeat(4, 80px);
+    margin: 0 auto;
+  }
+}
+
+h1 {
+  text-align: center;
+  margin: 1rem auto;
 }
