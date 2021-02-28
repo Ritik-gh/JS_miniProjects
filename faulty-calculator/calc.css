@@ -3,11 +3,14 @@
 *::after {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
-  background-color: rgb(13, 17, 23);
-  color: white;
+  /* background-color: rgb(13, 17, 23); */
+  background-color: #f9f8f7;
+  color: #325294;
   padding: 0 1rem;
+  font-family: "Stick", sans-serif;
 }
 .calc {
   max-width: 380px;
@@ -24,26 +27,56 @@ body {
     "one two three plus"
     "zer equals equals equals";
   justify-content: center;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   /* border: 1px solid rgb(167, 177, 187); */
   margin: 4rem auto;
   padding: 1rem;
+  background-color: #68a8f1;
+  /* background-color: #f9f8f7; */
   border-radius: 1rem;
-  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
 }
 .screen {
   grid-area: screen;
-  border: 1px solid #333;
+  /* border: 1px solid #333; */
   /* border: 1px solid rgb(201, 209, 217); */
   border-radius: 1rem;
-  background-color: rgb(22, 27, 34);
+  background-color: #f9f8f7;
+  /* background-color: #283e6b; */
   padding: 0.5rem;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 32px;
+  line-height: 1.1;
   font-weight: bold;
+}
+button {
+  font-size: 24px;
+  /* border: 1px solid #333; */
+  border: none;
+  border-radius: 1rem;
+  outline: 0;
+  transition: transform 0.5s, background-color 0.5s;
+  cursor: pointer;
+  /* background-color: black; */
+  /* background-color: #68a8f1; */
+  color: #283e6b;
+  user-select: none;
+  font-family: inherit;
+}
+
+button:active,
+button.active,
+button.powerOps,
+button:hover {
+  background-color: #325294;
+  color: #f9f8f7;
+}
+
+button:active {
+  transform: scale(0.85);
 }
 .one {
   grid-area: one;
@@ -97,25 +130,9 @@ body {
   grid-area: equals;
 }
 
-button {
-  font-size: 20px;
-  border: 1px solid #333;
-  border-radius: 1rem;
-  outline: 0;
-  transition: transform 0.5s, background-color 0.5s;
-  cursor: pointer;
-  background-color: black;
-  color: white;
-  user-select: none;
-}
-
-button:active {
-  background-color: rgb(22, 27, 34);
-  transform: scale(0.85);
-}
-
-@media (min-width: 450px) {
+@media (max-width: 450px) {
   .calc {
+    max-width: 360px;
   }
 }
 
