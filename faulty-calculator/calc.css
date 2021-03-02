@@ -34,7 +34,7 @@ body {
   background-color: #68a8f1;
   /* background-color: #f9f8f7; */
   border-radius: 1rem;
-  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
 }
 .screen {
   grid-area: screen;
@@ -51,6 +51,7 @@ body {
   font-size: 32px;
   line-height: 1.1;
   font-weight: bold;
+  word-break: break-all;
 }
 button {
   font-size: 24px;
@@ -133,6 +134,9 @@ button:active {
 @media (max-width: 450px) {
   .calc {
     max-width: 360px;
+  }
+  h1 {
+    margin: 1rem auto 0 auto;
   }
 }
 
