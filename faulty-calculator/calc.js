@@ -77,23 +77,24 @@ function calculator(e) {
     input === "enter" ||
     input === "Enter"
   ) {
-    let randomNumber = Math.floor(Math.random() * 10);
+    let firstRandomNumber = Math.floor(Math.random() * 10);
+    let secondRandomNumber = Math.floor(Math.random() * 10);
     if (secondTextNode.data !== "") {
       if (operationType === "+") {
-        firstTextNode.data =
-          parseInt(firstTextNode.data) + parseInt(secondTextNode.data);
+        firstTextNode.data = (parseInt(firstTextNode.data) + firstRandomNumber) + (parseInt(secondTextNode.data) + secondRandomNumber);
       }
       if (operationType === "-") {
-        firstTextNode.data =
-          parseInt(firstTextNode.data) - parseInt(secondTextNode.data);
+        firstTextNode.data = (parseInt(firstTextNode.data) + firstRandomNumber) - (parseInt(secondTextNode.data) + secondRandomNumber);
       }
       if (operationType === "*") {
         firstTextNode.data =
-          parseInt(firstTextNode.data) * parseInt(secondTextNode.data);
+          (parseInt(firstTextNode.data) + firstRandomNumber) *
+          (parseInt(secondTextNode.data) + secondRandomNumber);
       }
       if (operationType === "/") {
         firstTextNode.data =
-          parseInt(firstTextNode.data) / parseInt(secondTextNode.data);
+          (parseInt(firstTextNode.data) + firstRandomNumber) /
+          (parseInt(secondTextNode.data) + secondRandomNumber);
       }
       secondTextNode.data = "";
     }
@@ -106,7 +107,8 @@ function calculator(e) {
     if (firstTextNode.data.length > 12) {
       firstTextNode.data = (firstTextNode.data * 1).toPrecision(12);
     }
-    console.log(firstTextNode.data.length > 12);
+    console.log({ firstRandomNumber });
+    console.log({ secondRandomNumber });
   }
 }
 
