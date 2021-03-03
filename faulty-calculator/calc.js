@@ -77,6 +77,7 @@ function calculator(e) {
     input === "enter" ||
     input === "Enter"
   ) {
+    let randomNumber = Math.floor(Math.random() * 10);
     if (secondTextNode.data !== "") {
       if (operationType === "+") {
         firstTextNode.data =
@@ -103,7 +104,7 @@ function calculator(e) {
     el?.classList.remove("active");
     operationType = "";
     if (firstTextNode.data.length > 12) {
-      firstTextNode.data = parseInt(firstTextNode.data).toPrecision(12);
+      firstTextNode.data = (firstTextNode.data * 1).toPrecision(12);
     }
     console.log(firstTextNode.data.length > 12);
   }
