@@ -20,7 +20,7 @@ function calculator(e) {
     key = true;
   }
 
-  console.log(input);
+  console.log({ input });
 
   // feeding the input to DOM
   if (!isNaN(parseInt(input))) {
@@ -60,6 +60,10 @@ function calculator(e) {
   }
   // checking the type of operation
   else if (input === "+" || input === "-" || input === "*" || input === "/") {
+    let el = document.querySelector(".active");
+    if (el) {
+      el.classList.remove("active");
+    }
     if (!key) {
       e.target.classList.add("active");
     } else {
@@ -71,20 +75,30 @@ function calculator(e) {
       }
     }
     operationType = input;
-  } else if (
+  }
+  // processing the output
+  else if (
     input === "=" ||
     input === "ENTER" ||
     input === "enter" ||
     input === "Enter"
   ) {
+    console.log({ operationType });
     let firstRandomNumber = Math.floor(Math.random() * 10);
     let secondRandomNumber = Math.floor(Math.random() * 10);
-    if (secondTextNode.data !== "") {
+    // const [firstRandomNumber, secondRandomNumber] = [0, 0];
+    if (firstTextNode.data !== "" && secondTextNode.data !== "") {
       if (operationType === "+") {
-        firstTextNode.data = (parseInt(firstTextNode.data) + firstRandomNumber) + (parseInt(secondTextNode.data) + secondRandomNumber);
+        firstTextNode.data =
+          parseInt(firstTextNode.data) +
+          firstRandomNumber +
+          (parseInt(secondTextNode.data) + secondRandomNumber);
       }
       if (operationType === "-") {
-        firstTextNode.data = (parseInt(firstTextNode.data) + firstRandomNumber) - (parseInt(secondTextNode.data) + secondRandomNumber);
+        firstTextNode.data =
+          parseInt(firstTextNode.data) +
+          firstRandomNumber -
+          (parseInt(secondTextNode.data) + secondRandomNumber);
       }
       if (operationType === "*") {
         firstTextNode.data =
@@ -98,9 +112,6 @@ function calculator(e) {
       }
       secondTextNode.data = "";
     }
-    // else {
-    //   firstTextNode.data = "";
-    // }
     let el = document.querySelector(".active");
     el?.classList.remove("active");
     operationType = "";
