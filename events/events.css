@@ -1,188 +1,231 @@
-body{
-    margin:0;
-    background-color:#fff;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-header{
-    font-family: 'Text Me One', sans-serif;
-    text-align:center;
-    max-height:15vh;
-    font-size:4rem;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    color:#E5B681;
-    background-color:#fff;
+
+body {
+  margin: 0;
+  background-color: #fff;
 }
-main{
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:center;
-    align-items:center;
-    background-color:#fff;
-    max-width:100vw;
+
+::placeholder {
+  color: #b84d3c;
 }
-#newEvent{
-    font-family: 'Averia Gruesa Libre', cursive;
-    color:#B84D3C;
-    background-color:#E5B681;
-    border-radius:25rem;
-    padding:1rem;
-    position:fixed;
-    border:none;
+
+header {
+  font-family: "Text Me One", sans-serif;
+  text-align: center;
+  max-height: 15vh;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #e5b681;
+  background-color: #fff;
 }
-#newEvent:focus{
-    outline:0;
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  max-width: 100vw;
 }
-#newEvent:hover{
-    transition:font-size .25s ease;
-    font-size:3rem;
+#newEvent {
+  font-family: "Averia Gruesa Libre", cursive;
+  color: #b84d3c;
+  background-color: #e5b681;
+  border-radius: 25rem;
+  padding: 1rem;
+  position: fixed;
+  border: none;
+  transition: transform 0.25s ease;
+  cursor: pointer;
+  bottom: 5vh;
+  right: 5vw;
+  font-size: 16px;
 }
-form{
-    display:none;
-    position:fixed;
-    top:8rem;
-    left:16rem;
-    height:60vh;
-    width:60vw;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    flex-wrap:wrap;
-    background-color:#B84D3C;
-    color:#E5B681;
-    border-radius:1rem;
-    box-shadow:10px 10px 30px 1px rgba(0,0,0,0.2);
+#newEvent:focus {
+  outline: 0;
 }
-span{
-    font-size:1.25rem;
-    margin:.5rem;
-    padding:.2rem;
-    word-wrap:break-word;
-    font-family: 'Flamenco', cursive;
+#newEvent:hover {
+  transform: scale(1.2);
 }
-span[id='event']::before{
-    content:'Event: ';
-    font-weight:600;
-    font-family: 'Text Me One', sans-serif;
-    font-size:1.25rem;
+
+section {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
 }
-span[id='desc']::before{
-    content:'Description: ';
-    font-weight:600;
-    font-family: 'Text Me One', sans-serif;
-    font-size:1.25rem;
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  background-color: #b84d3c;
+  color: #e5b681;
+  padding: 32px;
+  border-radius: 1rem;
+  box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.2);
 }
-span[id='date']::before{
-    content:'Date: ';
-    font-weight:600;
-    font-family: 'Text Me One', sans-serif;
-    font-size:1.25rem;
+span {
+  font-size: 1.25rem;
+  margin: 0.5rem;
+  padding: 0.2rem;
+  word-wrap: break-word;
+  font-family: "Flamenco", cursive;
 }
-span[id='time']::before{
-    content:'Time: ';
-    font-weight:600;
-    font-family: 'Text Me One', sans-serif;
-    font-size:1.25rem;
+span[id="event"]::before {
+  content: "Event: ";
+  font-weight: 600;
+  font-family: "Text Me One", sans-serif;
+  font-size: 1.25rem;
 }
-span[id="rmvBtn"]{
-    background-color:red;
-    color:antiqueWhite;
-    font-size:2rem;
-    padding:1px 4px;
-    margin:0 auto;
-    align-self:center;
-    cursor:pointer;
+span[id="desc"]::before {
+  content: "Description: ";
+  font-weight: 600;
+  font-family: "Text Me One", sans-serif;
+  font-size: 1.25rem;
 }
-div{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:flex-start;
-    margin:2rem;
-    padding:.25rem 1rem;
-    height:300px;
-    width:260px;
-    word-wrap:break-word;
-    background-color:#f8cc27;
-    color:#6A7382;
-    border-radius:4rem;
-    transition:.5s;
-    overflow:hidden;
-    box-shadow:0px 5px 10px rgba(27,31,35,0.15);
+span[id="date"]::before {
+  content: "Date: ";
+  font-weight: 600;
+  font-family: "Text Me One", sans-serif;
+  font-size: 1.25rem;
 }
-div:hover{
-    height:340px;
-    width:300px;
+span[id="time"]::before {
+  content: "Time: ";
+  font-weight: 600;
+  font-family: "Text Me One", sans-serif;
+  font-size: 1.25rem;
 }
-label{
-    font-family: 'Imprima', sans-serif;
+span[id="rmvBtn"] {
+  background-color: red;
+  color: antiqueWhite;
+  font-size: 2rem;
+  padding: 4px 8px;
+  margin: 0 auto;
+  align-self: center;
+  cursor: pointer;
+  border-radius: 4px;
 }
-input{
-    padding:.5rem;
-    margin:.5rem;
-    border-radius:2rem;
-    background-color:#E5B681;
-    color:#B84D3C;
-    font-family: 'Flamenco', cursive;
-    border:none;
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 2rem;
+  padding: 0.25rem 1rem;
+  height: 300px;
+  width: 300px;
+  word-wrap: break-word;
+  background-color: #f8cc27;
+  color: #6a7382;
+  border-radius: 4rem;
+  transition: transform 0.5s;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px rgba(27, 31, 35, 0.15);
 }
-input:focus{
-    outline:0;
+div:hover {
+  transform: scale(1.05);
 }
-button{
-    color:#B84D3C;
-    background-color:#E5B681;
-    padding:.5rem;
-    margin:.5rem;
-    font-size:2rem;
-    font-weight:600;
-    border-radius:2rem;
-    font-family: 'Averia Gruesa Libre', cursive;
-    border:none;
+label {
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  font-family: "Imprima", sans-serif;
 }
-button:focus{
-    outline:0;
+input {
+  display: inline-flex;
+  align-items: center;
+  justify-self: center;
+  height: 40px;
+  width: 75%;
+  padding: 0 16px;
+  margin: 0.5rem;
+  border-radius: 2rem;
+  background-color: #e5b681;
+  color: #b84d3c;
+  font-weight: 700;
+  font-family: "Flamenco", cursive;
+  border: none;
 }
-#desc, #dinank, #samay{
-    font-size:1rem;
+input:focus {
+  outline: 0;
 }
-@media(max-width:700px){
-    #newEvent{
-        bottom:20vh;
-        right:10vw;
-        font-size:1rem;
-    }
-    form{
-        height:70vh;
-        width:80vw;
-        top:20vh;
-        left:10vw;
-    }
-    input{
-        font-size:.75rem;
-    }
-    label{
-        font-size:1rem;
-    }
+button {
+  cursor: pointer;
+  color: #b84d3c;
+  background-color: #e5b681;
+  height: 40px;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  margin: 0.5rem;
+  font-size: 24px;
+  font-weight: 600;
+  border-radius: 2rem;
+  font-family: "Averia Gruesa Libre", cursive;
+  border: none;
 }
-@media(min-width:700px){
-    #newEvent{
-        bottom:20vh;
-        right:15vw;
-        font-size:2rem;
-    }
-    form{
-        top:8rem;
-        left:16rem;
-        height:60vh;
-        width:60vw;
-    }
-    input{
-        font-size:1.5rem;
-    }
-    label{
-        font-size:2rem;
-    }
+button:focus {
+  outline: 0;
+}
+#desc,
+#dinank,
+#samay {
+  font-size: 1rem;
+}
+@media (max-width: 700px) {
+  /* #newEvent {
+    bottom: 20vh;
+    right: 10vw;
+    font-size: 1rem;
+  } */
+  form {
+    width: 90%;
+  }
+  input {
+    font-size: 16px;
+    display: flex;
+    margin: 8px 0;
+    width: 100%;
+  }
+  label {
+    font-size: 1rem;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 700px) {
+  /* #newEvent {
+    bottom: 20vh;
+    right: 15vw;
+    font-size: 2rem;
+  /* } */
+  form {
+    width: 576px;
+  }
+  input {
+    font-size: 20px;
+  }
+  label {
+    font-size: 24px;
+  }
 }

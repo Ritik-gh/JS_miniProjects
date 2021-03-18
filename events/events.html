@@ -1,24 +1,46 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href="events.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Bungee+Shade&family=Cabin+Sketch&family=Cormorant+Garamond&family=Ewert&family=Flamenco&family=Fondamento&family=Fredericka+the+Great&family=Imprima&family=Josefin+Slab:wght@600&family=Julius+Sans+One&family=Kavoon&family=Lekton&family=Modak&family=Text+Me+One&display=swap" rel="stylesheet">
-        <title>Events</title>
-        <meta name="viewport" content="width=device-width, intial-scale=1.0">
-    </head>
-    <body>
-        <header>Events</header>
-        <main>
-            <form>
-                <label>Title: <input Name="Event" type="text" maxlength="50" autofocus autocomplete="off"></label>
-                <label>Description: <input Name="Description" type="text"maxlength="150" autocomplete="off"></label>
-                <label>Date: <input Name="Date" type="date"></label>
-                <label>Time: <input Name="Time" type="time"></label>
+  <head>
+    <link href="events.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Bungee+Shade&family=Cabin+Sketch&family=Cormorant+Garamond&family=Ewert&family=Flamenco&family=Fondamento&family=Fredericka+the+Great&family=Imprima&family=Josefin+Slab:wght@600&family=Julius+Sans+One&family=Kavoon&family=Lekton&family=Modak&family=Text+Me+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Events</title>
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+  </head>
+  <body>
+    <header>Events</header>
+    <main>
+      <section>
+        <form>
+          <label
+            >Title:
+            <input
+              name="Event"
+              type="text"
+              maxlength="50"
+              autofocus
+              autocomplete="off"
+              placeholder="Name the event"
+          /></label>
+          <label
+            >Description:
+            <input
+              name="Description"
+              type="text"
+              maxlength="650"
+              autocomplete="off"
+              placeholder="Describe the event"
+          /></label>
+          <label>Date: <input name="Date" type="date" /></label>
+          <label>Time: <input name="Time" type="time" /></label>
 
-                <button>Add Event</button>
-            </form>
-            <button id="newEvent">Add</button>
-        </main>
-        <script src="events.js"></script>
-    </body>
+          <button>Add Event</button>
+        </form>
+      </section>
+      <button id="newEvent">Add</button>
+    </main>
+    <script src="events.js"></script>
+  </body>
 </html>
