@@ -1,11 +1,14 @@
-newEvent = document.querySelector("#newEvent");
-section = document.querySelector("section");
+let newEvent = document.querySelector("#newEvent");
+let section = document.querySelector("section");
+let close = document.querySelector("h4");
 
 newEvent.onclick = () => {
   section.style.display = "flex";
 };
 section.addEventListener("click", function (e) {
   if (e.target.nodeName === "SECTION") {
+    section.style.display = "none";
+  } else if (e.target.nodeName === "H4") {
     section.style.display = "none";
   }
 });
@@ -17,11 +20,12 @@ section.onsubmit = () => {
 };
 function EventCard() {
   let inputs = document.querySelectorAll("input");
+  let textarea = document.querySelector("textarea");
 
   let eventF = inputs[0].value;
-  let descF = inputs[1].value;
-  let dinankF = inputs[2].value;
-  let samayF = inputs[3].value;
+  let descF = textarea.value;
+  let dinankF = inputs[1].value;
+  let samayF = inputs[2].value;
 
   const eventName = document.createElement("span");
   const Description = document.createElement("span");

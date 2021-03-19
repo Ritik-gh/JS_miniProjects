@@ -68,6 +68,7 @@ section {
 }
 
 form {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,6 +80,17 @@ form {
   border-radius: 1rem;
   box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.2);
 }
+
+h4 {
+  position: absolute;
+  color: #e5b681;
+  font-family: sans-serif;
+  font-weight: 700;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+  margin: 0;
+}
 span {
   font-size: 1.25rem;
   margin: 0.5rem;
@@ -86,7 +98,7 @@ span {
   word-wrap: break-word;
   font-family: "Flamenco", cursive;
 }
-span[id="event"]::before {
+span[id="eventName"]::before {
   content: "Event: ";
   font-weight: 600;
   font-family: "Text Me One", sans-serif;
@@ -125,7 +137,7 @@ div {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin: 2rem;
+  margin: 1rem;
   padding: 0.25rem 1rem;
   height: 300px;
   width: 300px;
@@ -148,22 +160,28 @@ label {
   font-weight: 700;
   font-family: "Imprima", sans-serif;
 }
-input {
+input,
+textarea {
   display: inline-flex;
   align-items: center;
   justify-self: center;
   height: 40px;
-  width: 75%;
-  padding: 0 16px;
+  width: 70%;
+  padding: 8px 16px;
   margin: 0.5rem;
-  border-radius: 2rem;
+  border-radius: 12px;
   background-color: #e5b681;
   color: #b84d3c;
   font-weight: 700;
   font-family: "Flamenco", cursive;
   border: none;
 }
-input:focus {
+
+textarea {
+  height: initial;
+}
+input:focus,
+textarea:focus {
   outline: 0;
 }
 button {
@@ -200,7 +218,8 @@ button:focus {
   form {
     width: 90%;
   }
-  input {
+  input,
+  textarea {
     font-size: 16px;
     display: flex;
     margin: 8px 0;
@@ -222,7 +241,8 @@ button:focus {
   form {
     width: 576px;
   }
-  input {
+  input,
+  textarea {
     font-size: 20px;
   }
   label {
