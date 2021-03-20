@@ -24,6 +24,7 @@
               autofocus
               autocomplete="off"
               placeholder="Name the event"
+              required
           /></label>
           <label
             >Description:
@@ -32,10 +33,11 @@
               rows="6"
               autocomplete="off"
               placeholder="Describe the event"
+              required
             ></textarea>
           </label>
-          <label>Date: <input name="Date" type="date" /></label>
-          <label>Time: <input name="Time" type="time" /></label>
+          <label>Date: <input name="Date" type="date" required /></label>
+          <label>Time: <input name="Time" type="time" required /></label>
 
           <button>Add Event</button>
         </form>
