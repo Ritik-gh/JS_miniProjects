@@ -40,9 +40,7 @@ function calculator(e) {
   // backspace functionality
   else if (
     input === "←" ||
-    input === "BACKSPACE" ||
-    input === "backspace" ||
-    input === "Backspace"
+    input.toLowerCase() === "backspace"
   ) {
     if (secondTextNode.data !== "") {
       secondTextNode.data = secondTextNode.data.slice(
@@ -79,36 +77,29 @@ function calculator(e) {
   // processing the output
   else if (
     input === "=" ||
-    input === "ENTER" ||
-    input === "enter" ||
-    input === "Enter"
+    input.toLowerCase() === "enter"
   ) {
     console.log({ operationType });
-    let firstRandomNumber = Math.floor(Math.random() * 10);
-    let secondRandomNumber = Math.floor(Math.random() * 10);
-    // const [firstRandomNumber, secondRandomNumber] = [0, 0];
     if (firstTextNode.data !== "" && secondTextNode.data !== "") {
       if (operationType === "+") {
         firstTextNode.data =
           parseInt(firstTextNode.data) +
-          firstRandomNumber +
-          (parseInt(secondTextNode.data) + secondRandomNumber);
+          parseInt(secondTextNode.data);
       }
       if (operationType === "-") {
         firstTextNode.data =
-          parseInt(firstTextNode.data) +
-          firstRandomNumber -
-          (parseInt(secondTextNode.data) + secondRandomNumber);
+          parseInt(firstTextNode.data) -
+          parseInt(secondTextNode.data);
       }
       if (operationType === "*") {
         firstTextNode.data =
-          (parseInt(firstTextNode.data) + firstRandomNumber) *
-          (parseInt(secondTextNode.data) + secondRandomNumber);
+          parseInt(firstTextNode.data) *
+          parseInt(secondTextNode.data);
       }
       if (operationType === "/") {
         firstTextNode.data =
-          (parseInt(firstTextNode.data) + firstRandomNumber) /
-          (parseInt(secondTextNode.data) + secondRandomNumber);
+          parseInt(firstTextNode.data) /
+          parseInt(secondTextNode.data);
       }
       secondTextNode.data = "";
     }
@@ -118,8 +109,6 @@ function calculator(e) {
     if (firstTextNode.data.length > 12) {
       firstTextNode.data = (firstTextNode.data * 1).toPrecision(12);
     }
-    console.log({ firstRandomNumber });
-    console.log({ secondRandomNumber });
   }
 }
 
