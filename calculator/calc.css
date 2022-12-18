@@ -13,8 +13,8 @@ body {
   font-family: "Stick", sans-serif;
 }
 .calc {
-  max-width: 380px;
-  height: 60vh;
+  max-width: 340px;
+  height: 420px;
   display: grid;
   grid-gap: 2%;
   grid-template-columns: repeat(4, 23%);
@@ -59,7 +59,7 @@ button {
   border: none;
   border-radius: 1rem;
   outline: 0;
-  transition: transform 0.5s, background-color 0.5s;
+  transition: transform 0.3s, background-color 0.3s;
   cursor: pointer;
   /* background-color: black; */
   /* background-color: #68a8f1; */
@@ -77,7 +77,7 @@ button:hover {
 }
 
 button:active {
-  transform: scale(0.85);
+  transform: scale(0.9);
 }
 .one {
   grid-area: one;
@@ -132,9 +132,6 @@ button:active {
 }
 
 @media (max-width: 450px) {
-  .calc {
-    max-width: 360px;
-  }
   h1 {
     margin: 1rem auto 0 auto;
   }

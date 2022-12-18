@@ -40,7 +40,7 @@ function calculator(e) {
   // backspace functionality
   else if (
     input === "←" ||
-    input.toLowerCase() === "backspace"
+    input?.toLowerCase() === "backspace"
   ) {
     if (secondTextNode.data !== "") {
       secondTextNode.data = secondTextNode.data.slice(
@@ -77,7 +77,7 @@ function calculator(e) {
   // processing the output
   else if (
     input === "=" ||
-    input.toLowerCase() === "enter"
+    input?.toLowerCase() === "enter"
   ) {
     console.log({ operationType });
     if (firstTextNode.data !== "" && secondTextNode.data !== "") {
